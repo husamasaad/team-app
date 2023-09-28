@@ -7,6 +7,8 @@ import Testimonials from './Testimonials'
 import Footer from './Footer'
 import BlogPosts from './BlogPosts'
 import PostCard from './PostCard'
+import Comments from './Comments'
+import AddComment from './AddComment'
 
 
 
@@ -19,5 +21,7 @@ export {
   Testimonials,
   Footer,
   BlogPosts,
-  PostCard
+  PostCard,
+  Comments,
+  AddComment
 }

@@ -41,7 +41,7 @@ const post = {
     {
       name: 'publishedAt',
       title: 'Published at',
-      type: 'datetime',
+      type: 'date',
     },
     {
       name: 'summary',
