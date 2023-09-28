@@ -1,3 +1,5 @@
+import comments from "./comments"
+
 const post = {
   name: 'post',
   title: 'Post',
@@ -53,6 +55,14 @@ const post = {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'comments',
+      title: 'Comments',
+      type: 'array',
+      of: [
+        comments
+      ]
+    }
   ],
 
   preview: {

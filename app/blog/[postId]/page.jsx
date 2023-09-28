@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { getPost, getPosts } from '@/sanity/actions'
 import {PortableText} from '@portabletext/react'
 import Comments from '@/components/Comments'
-
+import { urlFor } from '@/sanity/lib/client'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -30,10 +30,8 @@ async function Post({ params: { postId } }) {
     profileImage,
     image,
     publishedAt,
-    summary,
+    comments,
     body} = post
-
-    console.log(body);
 
   return (
     <>
@@ -63,7 +61,7 @@ async function Post({ params: { postId } }) {
             </div>
           </section>
 
-          <Comments img={profileImage} />
+          <Comments comments={comments} />
         </div>
       </main>
       <Footer />

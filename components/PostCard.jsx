@@ -13,11 +13,10 @@ const PostCard = ({ postData }) => {
     profileImage,
     image,
     publishedAt,
-    summary,
-    body} = postData
+    summary} = postData
     
   return (
-    <div className='w-full max-w-fit sm:max-w-[340px] rounded-xl drop-shadow-xl bg-white overflow-hidden relative'>
+    <div className='w-full max-w-fit sm:max-w-[346px] rounded-xl drop-shadow-xl bg-white overflow-hidden relative'>
       <Image height={220} width={300} className='w-full h-56 object-cover' alt='blog-post' src={image}/>
       <div className='p-4 pb-32'>
         <h3 className='mt-3 mb-6 text-2xl text-secondary hover:underline'>
