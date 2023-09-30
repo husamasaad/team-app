@@ -2,6 +2,7 @@
 import './globals.css'
 
 import { Footer } from '@/components/index'
+import AuthProvider from '@/context/AuthProvider'
 import { ContextProvider } from '@/context/ContextProvider'
 
 
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-slate-100'>
+        <AuthProvider>
         <ContextProvider>
           {children}
         </ContextProvider>
+        </AuthProvider>
       </body>
     </html>
   )

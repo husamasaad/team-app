@@ -65,11 +65,6 @@ export const navLinks = [
     name: 'Support',
     goto: '/'
   },
-  {
-    id: 4,
-    name: 'Log-in',
-    goto: '/'
-  },
 ]
 
 export const testimonials = [
@@ -177,86 +172,67 @@ export const footerLinks = [
   },
 ];
 
-export const blogposts = [
+
+export const loginFields=[
   {
-    id: 1,
-    title: 'Data exported by Team Cloud organization',
-    details: 'An internal investigation recently uncovered a vulnerability (identified as CVE-2022-21706) in Zulip’s invitation links.',
-    author: 'Cameron Williamson',
-    date: 'July 1, 2023',
-    thumbnail: Thumbnail1,
-    authorImg: Avatar1
+      labelText:"Email address",
+      labelFor:"email-address",
+      id:"email",
+      name:"email",
+      type:"email",
+      autoComplete:"email",
+      isRequired:true,
+      placeholder:"Email address"   
   },
   {
-    id: 2,
-    title: 'Swap long video calls and emails for asynchronous video',
-    details: 'Meetings are essential for communication and team building, but they’re often unproductive. Asynchronous video to the rescue.',
-    author: 'Robert Fox',
-    date: 'June 21, 2023',
-    thumbnail: Thumbnail2,
-    authorImg: Avatar2
+      labelText:"Password",
+      labelFor:"password",
+      id:"password",
+      name:"password",
+      type:"password",
+      autoComplete:"current-password",
+      isRequired:true,
+      placeholder:"Password"   
+  }
+]
+
+export const signupFields=[
+  {
+      labelText:"Username",
+      labelFor:"username",
+      id:"username",
+      name:"username",
+      type:"text",
+      autoComplete:"username",
+      isRequired:true,
+      placeholder:"Username"   
   },
   {
-    id: 3,
-    title: 'Flexibility reigns: six key takeaways from Frontiers 2023',
-    details: 'The future of work is having a digital HQ that works for you.',
-    author: 'Jenny Wilson',
-    date: 'June 10, 2023',
-    thumbnail: Thumbnail3,
-    authorImg: Avatar3
+      labelText:"Email address",
+      labelFor:"email-address",
+      id:"email",
+      name:"email",
+      type:"email",
+      autoComplete:"email",
+      isRequired:true,
+      placeholder:"Email address"   
   },
   {
-    id: 4,
-    title: 'Team plus Sales Cloud: Your sales team’s new digital HQ',
-    details: 'Why everyone on your sales team will benefit from our app’s killer features.',
-    author: 'Kathryn Murphy',
-    date: 'May 11, 2023',
-    thumbnail: Thumbnail4,
-    authorImg: Avatar4
-  },
-  {
-    id: 5,
-    title: 'Steve Dotto’s top 10 tips for overcoming workplace hiccups',
-    details: 'The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.',
-    author: 'Theresa Webb',
-    date: 'April 4, 2023',
-    thumbnail: Thumbnail5,
-    authorImg: Avatar5
-  },
-  {
-    id: 6,
-    title: 'What is digital culture?',
-    details: 'The teams best prepared for change use modern digital communication tools, feel comfortable learning new ones and continually adapt how they work.',
-    author: 'Devon Lane',
-    date: 'May 22, 2023',
-    thumbnail: Thumbnail6,
-    authorImg: Avatar1
-  },
-  {
-    id: 7,
-    title: 'What’s new in Team: iPad updates, split-screen view and more',
-    details: 'An internal investigation recently uncovered a vulnerability (identified as CVE-2022-21706) in Zulip’s invitation links.',
-    author: 'Eleanor Pena',
-    date: 'March 18, 2023',
-    thumbnail: Thumbnail7,
-    authorImg: Avatar1
-  },
-  {
-    id: 8,
-    title: 'Drive more efficiency and cost savings with these updates to Workflow Builder',
-    details: 'New and upcoming automation features help your teams do more with less.',
-    author: 'Jerome Bell',
-    date: 'February 12, 2023',
-    thumbnail: Thumbnail8,
-    authorImg: Avatar1
-  },
-  {
-    id: 9,
-    title: '7 tips to onboard sales reps with ease',
-    details: 'The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.',
-    author: 'Savannah Nguyen',
-    date: 'January 7, 2023',
-    thumbnail: Thumbnail9,
-    authorImg: Avatar1
-  },
+      labelText:"Password",
+      labelFor:"password",
+      id:"password",
+      name:"password",
+      type:"password",
+      autoComplete:"current-password",
+      isRequired:true,
+      placeholder:"Password"   
+  }
+]
+
+export const avatars = [
+  Avatar1,
+  Avatar2,
+  Avatar3,
+  Avatar4,
+  Avatar5,
 ]

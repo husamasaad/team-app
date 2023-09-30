@@ -13,6 +13,7 @@ import { navLinks } from '@/constants/data'
 import Menu from './Menu'
 
 import { useStateContext } from '@/context/ContextProvider.js'
+import { SignIn } from '@/components/index'
 
 
 function Navbar({ light }) {
@@ -38,10 +39,11 @@ function Navbar({ light }) {
         <div className='hidden md:flex gap-16 items-center mt-4'>
           <ul className={`text-lg flex gap-16 ${textColor}`}>
             {navLinks.map(link => (
-              <li key={link.id} className='hover:underline '>
+              <li key={link.id} className='hover:underline'>
                 <Link href={link.goto}>{link.name}</Link>
               </li>
             ))}
+            <SignIn />
           </ul>
           <button className={`bg-[#5468e780] hover:bg-[#5468e7] ${textColor} py-3 px-8 text-lg transition-colors`}>
             Get Access

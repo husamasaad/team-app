@@ -9,6 +9,8 @@ import BlogPosts from './BlogPosts'
 import PostCard from './PostCard'
 import Comments from './Comments'
 import AddComment from './AddComment'
+import SignIn from './SignIn'
+import LoginHeader from './LoginHeader'
 
 
 
@@ -23,5 +25,7 @@ export {
   BlogPosts,
   PostCard,
   Comments,
-  AddComment
+  AddComment,
+  SignIn,
+  LoginHeader
 }

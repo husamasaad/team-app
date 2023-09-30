@@ -7,6 +7,7 @@ import { BsX }  from 'react-icons/bs'
 import { navLinks } from '@/constants/data'
 
 import { useStateContext } from '@/context/ContextProvider'
+import { SignIn } from '@/components/index'
 
 const Menu = () => {
 
@@ -25,6 +26,7 @@ const Menu = () => {
               <Link href={link.goto}>{link.name}</Link>
             </li>
             ))}
+            <SignIn />
         </ul>
         <button className='bg-[#5468e7] text-white py-3 px-8 text-lg'>
               Get Access
