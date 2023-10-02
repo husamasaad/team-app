@@ -1,6 +1,8 @@
 import React from 'react'
 import { BlogPosts, Footer, Navbar } from '@/components/index'
 
+export const revalidate = 90
+
 const page = () => {
 
   return (

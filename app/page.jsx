@@ -5,6 +5,8 @@ import { sectionsData } from '@/constants/data'
 import { Footer, Navbar, Testimonials } from '@/components/index'
 import { FlexSection, Hero } from '@/components/index'
 
+export const revalidate = 90
+
 
 export default function Home() {
 

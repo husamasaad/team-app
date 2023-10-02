@@ -6,6 +6,8 @@ import {PortableText} from '@portabletext/react'
 import Comments from '@/components/Comments'
 import { urlFor } from '@/sanity/lib/client'
 
+export const revalidate = 90
+
 export async function generateStaticParams() {
   const posts = await getPosts()
 
