@@ -8,6 +8,7 @@ import { createUser } from '@/sanity/actions';
 import toast, { Toaster } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import ProfilPlaceHoleder from '/public/profile.png'
+import NProgress from 'nprogress'
 
 const fields = signupFields;
 let fieldsState={};
@@ -37,18 +38,22 @@ const SignUp =  () => {
       error: 'Error when fetching',
     }
     );
+    NProgress.start()
     
     const result = await Newuser
 
 
     if (result == 'email') {
       setSignupState({...signupState, email: ""})
+      NProgress.done()
       toast.error('This Email already exist!')
     } else if (result == 'email') {
       setSignupState({...signupState, username: ""})
+      NProgress.done()
       toast.error('This username already exist!')
     } else {
       toast.success('signed up successfully')
+      NProgress.done()
       router.replace('/auth/signIn')
     }
   }
