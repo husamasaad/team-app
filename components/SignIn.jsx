@@ -15,7 +15,7 @@ const SignIn = () => {
   if (session) {
     return (
       <li className='flex items-center gap-2'>
-        <Image src={userImage} width={24} height={24} alt={session.user.name} className='rounded-full' />
+        <Image src={userImage} width={24} height={24} alt={session.user.name} className='rounded-full object-cover' />
         <button className='text-sm hover:underline border-l pl-2' onClick={() => signOut()}>Sign Out</button>
       </li>
     )

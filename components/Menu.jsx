@@ -22,10 +22,10 @@ const Menu = () => {
           </button>
         <ul className='text-lg text-blue-900/90 flex flex-col gap-16 mb-10'>
             <li className='hover:underline'>
-                <Link href='/'>Product</Link>
+                <Link href='/' onClick={() => setActiveMenu(false)}>Product</Link>
             </li>
             <li className='hover:underline'>
-                <Link href='/blog'>Blog</Link>
+                <Link href='/blog' onClick={() => setActiveMenu(false)}>Blog</Link>
             </li>
             <li className='hover:underline'>
                 <button onClick={() => toast.error('Support Services will be added soon...')} >Support</button>

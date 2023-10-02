@@ -18,7 +18,7 @@ const Comments = ({ comments, id }) => {
         return (
           <div className='flex flex-col md:flex-row gap-4 w-full items-start mb-24'>
           <div className='flex items-center flex-col gap-1 '>
-            <Image src={urlFor(profilePic).url()} width={48} height={48} className='rounded-full' alt='hi'/>
+            <Image src={urlFor(profilePic).url()} width={48} height={48} className='rounded-full object-cover' alt='hi'/>
             <p className='w-fit whitespace-nowrap text-gray-400 text-sm leading-8 tracking-wider capitalize'>{username}</p>
           </div>
           <div className='w-full mb-14 px-6 text-gray-400 text-xl leading-8 tracking-wider'>
