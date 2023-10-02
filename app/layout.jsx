@@ -1,15 +1,17 @@
 
 import './globals.css'
 
-import { Footer } from '@/components/index'
 import AuthProvider from '@/context/AuthProvider'
 import { ContextProvider } from '@/context/ContextProvider'
+import { Next13NProgress, Link } from 'nextjs13-progress';
+
 
 
 export const metadata = {
-  title: "HomePage",
+  title: "Team App",
   description: 'Created By Husam',
 }
+
 
 export default function RootLayout({
   children
@@ -20,6 +22,7 @@ export default function RootLayout({
         <AuthProvider>
         <ContextProvider>
           {children}
+          <Next13NProgress color="#7676B2" height={5} />
         </ContextProvider>
         </AuthProvider>
       </body>

@@ -23,7 +23,7 @@ const Login = () => {
   
   const handleSubmit= async (e)=>{
     e.preventDefault();
-    const res = signIn('credentials', { redirect: false, password: loginState.password, email: loginState.email })
+    const res = signIn('credentials', { redirect: false, password: loginState.password, email: loginState.email})
     
     toast.promise(res, {
       loading: 'fetching users',

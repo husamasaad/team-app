@@ -14,8 +14,6 @@ export async function generateStaticParams() {
   }))
 }
 
-
-
 async function Post({ params: { postId } }) {
 
   const posts = await getPosts()
@@ -61,7 +59,7 @@ async function Post({ params: { postId } }) {
             </div>
           </section>
 
-          <Comments comments={comments} />
+          <Comments comments={comments} id={_id} />
         </div>
       </main>
       <Footer />

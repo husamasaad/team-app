@@ -44,7 +44,10 @@ export const getUsers = async () => {
   }
 }
 
-export const createUser = async (userBody) => {
+export const createUser = async (userBody, pic) => {
+
+  
+  const image = await writeClient.assets.upload('image', pic, {contentType: 'image/png', filename: 'profile.png'})
 
   const users = await getUsers()
   let result;
@@ -65,10 +68,28 @@ export const createUser = async (userBody) => {
   } else {
     result = await writeClient.create({
       _type: "users",
-      ...userBody
+      ...userBody,
+      image: {
+        _type: 'image',
+        asset: {
+          _type: "reference",
+          _ref: image._id
+        }
+      }
     })
   
     return result
   }
+}
 
+export const createComment = async (id, comment) => {
+
+  const result = await writeClient.patch(id)
+    .setIfMissing({comments: []})
+    .insert('after', 'comments[-1]', [comment])
+    .commit({
+      autoGenerateArrayKeys: true,
+    })
+
+    return result
 }

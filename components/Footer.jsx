@@ -1,6 +1,7 @@
 import  logo from "public/logo-dark.png"
 import { footerLinks, socialMedia } from "@/constants/data"
 import Image from "next/image"
+import Subscribe from "./Subscribe"
 
 const Footer = () => (
   <section className={`flex justify-center items-center sm:py-10 py-6 flex-col px-10 bg-primary`}>
@@ -26,7 +27,7 @@ const Footer = () => (
         <div className="flex flex-col ss:my-0 my-4 min-w-[150px]">
           <h4 className="mb-4 font-medium text-lg leading-[27px] text-[#5468E7]">Stay Up to Date</h4>
           <p className="font-normal text-md leading-[24px] text-slate-200 mb-4">Subscribe to our newseller</p>
-          <input className="border-none outline-none p-3 min-w-[280px] bg-[rgba(245,245,245,0.24)]" placeholder='Email:' type="email" />
+          <Subscribe />
         </div>
       </div>
     </div>

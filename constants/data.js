@@ -7,16 +7,6 @@ import Avatar3 from 'public/avatar-03.png'
 import Avatar4 from 'public/avatar-04.png'
 import Avatar5 from 'public/avatar-05.png'
 
-import Thumbnail1 from 'public/gallery-01.png'
-import Thumbnail2 from 'public/gallery-02.png'
-import Thumbnail3 from 'public/gallery-03.jpg'
-import Thumbnail4 from 'public/gallery-04.png'
-import Thumbnail5 from 'public/gallery-05.jpg'
-import Thumbnail6 from 'public/gallery-06.png'
-import Thumbnail7 from 'public/gallery-07.png'
-import Thumbnail8 from 'public/gallery-08.png'
-import Thumbnail9 from 'public/gallery-09.png'
-
 
 export const sectionsData = [
   {
@@ -49,23 +39,6 @@ export const sectionsData = [
   },
 ]
 
-export const navLinks = [
-  {
-    id: 1,
-    name: 'Product',
-    goto: '/'
-  },
-  {
-    id: 2,
-    name: 'Blog',
-    goto: '/blog'
-  },
-  {
-    id: 3,
-    name: 'Support',
-    goto: '/'
-  },
-]
 
 export const testimonials = [
   {

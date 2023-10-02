@@ -3,9 +3,11 @@
 import { signupFields } from '@/constants/data';
 import React, { useState } from 'react'
 import LoginInput from './LoginInput';
+import ProfileUplaod from './ProfileUplaod';
 import { createUser } from '@/sanity/actions';
 import toast, { Toaster } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import ProfilPlaceHoleder from '/public/profile.png'
 
 const fields = signupFields;
 let fieldsState={};
@@ -18,12 +20,16 @@ const SignUp =  () => {
 
   const [signupState, setSignupState]=useState(fieldsState);
 
+  const [profilePic, setProfilePic] = useState('/profile.png')
+
   const handleChange=(e)=>setSignupState({...signupState,[e.target.id]:e.target.value});
+
+  const handleImgChange = (e) => setProfilePic(e.target.files[0])
 
   const handleSubmit= async (e)=>{
     e.preventDefault();
 
-    const Newuser = createUser(signupState)
+    const Newuser = createUser(signupState, profilePic)
 
     toast.promise(Newuser, {
       loading: 'fetching users',
@@ -64,9 +70,9 @@ const SignUp =  () => {
                 isRequired={field.isRequired}
                 placeholder={field.placeholder}
               />
-            
             )
           }
+          <ProfileUplaod handleImgChange={handleImgChange} value={profilePic} />
         </div>
         
         <button

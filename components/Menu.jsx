@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from 'nextjs13-progress'
 import React from 'react'
 import { BsX }  from 'react-icons/bs'
 
@@ -21,11 +21,15 @@ const Menu = () => {
             <BsX />
           </button>
         <ul className='text-lg text-blue-900/90 flex flex-col gap-16 mb-10'>
-          {navLinks.map(link => (
-            <li onClick={() => setActiveMenu(false)} key={link.id} className='hover:text-blue-900 '>
-              <Link href={link.goto}>{link.name}</Link>
+            <li className='hover:underline'>
+                <Link href='/'>Product</Link>
             </li>
-            ))}
+            <li className='hover:underline'>
+                <Link href='/blog'>Blog</Link>
+            </li>
+            <li className='hover:underline'>
+                <button onClick={() => toast.error('Support Services will be added soon...')} >Support</button>
+            </li>
             <SignIn />
         </ul>
         <button className='bg-[#5468e7] text-white py-3 px-8 text-lg'>

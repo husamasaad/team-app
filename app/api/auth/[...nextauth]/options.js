@@ -22,7 +22,8 @@ export const options = {
       async authorize(credentials) {
         const users = await getUsers()
         const user = users?.find(user => (credentials?.email === user.email && credentials?.password === user.password));
-
+      
+        
         if(user) {
           return user
         } else {
@@ -31,19 +32,27 @@ export const options = {
       },
     })
   ],
+  callbacks: {
+    async jwt({ token, account, user }) {
+      // Persist the OAuth access_token and or the user id to the token right after signin
+      if (account) {
+        token.accessToken = account.access_token
+        token.id = user.id
+        token.name = user.username || undefined
+      }
+      return token
+    },
+    async session({ session, token, user }) {
+      // Send properties to the client, like an access_token and user id from a provider.
+      session.accessToken = token.accessToken
+      session.user.id = token.id
+      session.user.name = token.name
+
+      return session
+    }
+  },
   pages: {
     signIn: "/auth/signIn",
     newUser: '/auth/signUp'
   },
-  async redirect({ baseUrl, url }) {
-    const redirectUrl = decodeURIComponent(url);
-    const callbackIndex = redirectUrl.indexOf('callbackUrl=');
-    if (callbackIndex > -1) {
-        const callbackPath = redirectUrl.slice(callbackIndex + 12);
-        // If I try to login from my homepage, the nested callbackUrl contains the full baseUrl.
-        // This behavior seems to be triggerd if you call `signIn()` from a page.
-        return callbackPath.includes(baseUrl) ? callbackPath : baseUrl + callbackPath;
-    }
-    return url;
-},
 }

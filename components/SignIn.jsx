@@ -1,7 +1,6 @@
 
 'use client'
 
-import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/client'
@@ -12,8 +11,6 @@ const SignIn = () => {
   const { data: session } = useSession()
   
   const userImage = session?.user?.image ? urlFor(session?.user?.image).url() : '/profile.png'
-
-  console.log(userImage);
 
   if (session) {
     return (

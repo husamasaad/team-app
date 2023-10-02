@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'nextjs13-progress'
 import React from 'react'
 import Mockup from 'public/mockup.png'
 import Image from 'next/image'

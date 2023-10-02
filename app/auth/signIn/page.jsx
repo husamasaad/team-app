@@ -1,7 +1,7 @@
 import Login from '@/components/Login'
 import { LoginHeader } from '@/components/index'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from 'nextjs13-progress'
 import React from 'react'
 
 const page = () => {
