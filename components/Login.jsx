@@ -6,6 +6,7 @@ import LoginInput from './LoginInput';
 import { signIn } from 'next-auth/react';
 import { redirect, useRouter } from 'next/navigation';
 import toast, { Toaster } from 'react-hot-toast';
+import NProgress from 'nprogress'
 
 const fields = loginFields;
 
@@ -30,14 +31,17 @@ const Login = () => {
       success: 'Got the data',
       error: 'Error when fetching',
     })
+    NProgress.start()
 
     const result = await res
 
     if (result.error === 'CredentialsSignin') {
       toast.error('User does not Exist!')
+      NProgress.done()
       setLoginState({ email: '', password: ''})
     } else {
       toast.success('Welcome back')
+      NProgress.done()
       router.push('/')
     }
   }
