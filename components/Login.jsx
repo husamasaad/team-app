@@ -38,7 +38,7 @@ const Login = () => {
       setLoginState({ email: '', password: ''})
     } else {
       toast.success('Welcome back')
-      router.push('http://localhost:3000')
+      router.push('/')
     }
   }
 

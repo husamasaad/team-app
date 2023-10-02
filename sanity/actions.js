@@ -47,7 +47,7 @@ export const getUsers = async () => {
 export const createUser = async (userBody, pic) => {
 
   
-  const image = await writeClient.assets.upload('image', pic, {contentType: 'image/png', filename: 'profile.png'})
+  const image = await writeClient.assets.upload('image', pic, {contentType: pic.type, filename: 'profile.png'})
 
   const users = await getUsers()
   let result;
